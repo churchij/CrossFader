@@ -1,0 +1,6 @@
+{
+  "name": "youtube-music-crossfader",
+  "version": "0.1.5",
+  "private": true,
+  "scripts": { "test": "node --test tests/*.test.cjs", "check": "node --check background.js && node --check content.js && node --check core.js && node --check popup.js && node --check player-state.js" }
+}

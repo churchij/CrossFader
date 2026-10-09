@@ -1,0 +1,59 @@
+# Dependencies and local test artifacts
+node_modules/
+.playwright-cli/
+output/
+coverage/
+test-results/
+playwright-report/
+tmp/
+temp/
+.cache/
+.nyc_output/
+build/
+dist/
+*.tsbuildinfo
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+
+# Generated extension packages and signing keys
+*.crx
+*.pem
+
+# Logs and operating-system files
+*.log
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+._*
+.Spotlight-V100/
+.Trashes/
+
+# Editors and temporary files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.swp
+*.swo
+*~
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# Package manager debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

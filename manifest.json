@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "CrossFader for YouTube Music",
+  "version": "0.1.5",
+  "description": "Experimental real crossfades using a second YouTube Music playback tab. Adjustable 1–12 second overlap.",
+  "minimum_chrome_version": "112",
+  "permissions": ["storage"],
+  "host_permissions": ["https://music.youtube.com/*"],
+  "background": { "service_worker": "background.js" },
+  "icons": { "16": "assets/icon-16.png", "32": "assets/icon-32.png", "48": "assets/icon-48.png", "128": "assets/icon-128.png" },
+  "action": { "default_popup": "popup.html", "default_title": "YTXfade", "default_icon": { "16": "assets/icon-16.png", "32": "assets/icon-32.png" } },
+  "content_scripts": [{
+    "matches": ["https://music.youtube.com/*"],
+    "js": ["player-state.js"],
+    "world": "MAIN",
+    "run_at": "document_start"
+  }, {
+    "matches": ["https://music.youtube.com/*"],
+    "js": ["core.js", "content.js"],
+    "run_at": "document_start"
+  }]
+}
